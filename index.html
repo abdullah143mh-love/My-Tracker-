@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="calendar-header">
+        <h2 id="monthDisplay">Month Year</h2>
+    </div>
+    <div class="calendar-grid" id="calendarGrid">
+        </div>
+</div>
+
+<div class="overlay" id="overlay" onclick="closeModal()"></div>
+<div id="optionsModal">
+    <p>Select Status:</p>
+    <div class="btn-group">
+        <button class="opt-btn btn-taken" onclick="setStatus('taken')">✅</button>
+        <button class="opt-btn btn-period" onclick="setStatus('period')">🩸</button>
+        <button class="opt-btn btn-missed" onclick="setStatus('missed')">❌</button>
+        <button class="opt-btn btn-clear" onclick="setStatus('')">Reset</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

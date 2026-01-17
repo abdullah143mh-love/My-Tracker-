@@ -1,0 +1,128 @@
+:root {
+    --bg-color: #fdf6f0;
+    --card-bg: #ffffff;
+    --primary-text: #6d5d6e;
+    --taken-color: #b8e0d2;
+    --period-color: #f7d1d1;
+    --missed-color: #d6e2e9;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--primary-text);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #a68dad;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.day-name {
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #ccadb2;
+}
+
+.day {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: #fcfcfc;
+    border: 1px solid #f0f0f0;
+    cursor: pointer;
+    position: relative;
+    font-size: 0.85rem;
+}
+
+.icons-container {
+    display: flex;
+    gap: 2px;
+    margin-top: 2px;
+}
+
+.small-icon { font-size: 0.65rem; }
+
+/* Status Classes */
+.active-taken { border: 2px solid var(--taken-color); }
+.active-period { background-color: #fff0f0; } /* Light tint */
+
+#optionsModal {
+    display: none;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    z-index: 100;
+    text-align: center;
+    width: 250px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.2);
+    z-index: 99;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.opt-btn {
+    border: 2px solid transparent;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+.opt-btn.selected { border-color: #a68dad; background: #f0f0f0; }
+
+.close-modal-btn {
+    background: #a68dad;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
