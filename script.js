@@ -5,7 +5,9 @@ let trackerData = JSON.parse(localStorage.getItem('multiMedTracker')) || {};
 function initCalendar() {
     const month = currentViewDate.getMonth();
     const year = currentViewDate.getFullYear();
-    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]; document.getElementById('monthDisplay').innerText = `${monthNames[month]} ${year}`;
+    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    
+    document.getElementById('monthDisplay').innerText = `${monthNames[month]} ${year}`;
     const grid = document.getElementById('calendarGrid');
     grid.innerHTML = '';
 
